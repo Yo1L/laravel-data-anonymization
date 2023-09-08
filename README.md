@@ -4,11 +4,11 @@
 
 # Laravel Data Anonymization
 
-* This is a bridge package for a full integration of [Yo1L/data-anonymization](https://github.com/Yo1L/data-anonymization) into Laravel framework.
+* This is a bridge package for a full integration of [yo1l/data-anonymization](https://github.com/Yo1L/data-anonymization) into Laravel framework.
 
 ## Installation
 
-1. ```composer require Yo1L/laravel-data-anonymization```
+1. ```composer require yo1l/laravel-data-anonymization```
 
 2. Add `"Database\\Anonymization\\": "database/anonymization/",` to `composer.json -> autoload -> psr-4`
 
@@ -54,7 +54,7 @@ class DatabaseAnonymizer extends AbstractAnonymizer
 
 namespace Database\Anonymization;
 
-use Yo1L\DataAnonymization\Blueprint;
+use Arrilot\DataAnonymization\Blueprint;
 use Yo1L\LaravelDataAnonymization\AbstractAnonymizer;
 use Faker\Generator as Faker;
 

@@ -1,5 +1,5 @@
 {
-  "name": "Yo1L/laravel-data-anonymization",
+  "name": "yo1l/laravel-data-anonymization",
   "license": "MIT",
   "description": "Laravel bridge for arrilot/data-anonymization",
   "keywords": [

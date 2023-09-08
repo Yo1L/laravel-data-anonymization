@@ -1,14 +1,14 @@
-[![Latest Stable Version](https://poser.pugx.org/arrilot/laravel-data-anonymization/v/stable.svg)](https://packagist.org/packages/arrilot/laravel-data-anonymization/)
-[![Total Downloads](https://img.shields.io/packagist/dt/arrilot/laravel-data-anonymization.svg?style=flat)](https://packagist.org/packages/Arrilot/laravel-data-anonymization)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/arrilot/laravel-data-anonymization/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/arrilot/laravel-data-anonymization/)
+[![Latest Stable Version](https://poser.pugx.org/Yo1L/laravel-data-anonymization/v/stable.svg)](https://packagist.org/packages/Yo1L/laravel-data-anonymization/)
+[![Total Downloads](https://img.shields.io/packagist/dt/Yo1L/laravel-data-anonymization.svg?style=flat)](https://packagist.org/packages/Yo1L/laravel-data-anonymization)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/Yo1L/laravel-data-anonymization/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Yo1L/laravel-data-anonymization/)
 
 # Laravel Data Anonymization
 
-* This is a bridge package for a full integration of [arrilot/data-anonymization](https://github.com/arrilot/data-anonymization) into Laravel framework.
+* This is a bridge package for a full integration of [Yo1L/data-anonymization](https://github.com/Yo1L/data-anonymization) into Laravel framework.
 
 ## Installation
 
-1. ```composer require arrilot/laravel-data-anonymization```
+1. ```composer require Yo1L/laravel-data-anonymization```
 
 2. Add `"Database\\Anonymization\\": "database/anonymization/",` to `composer.json -> autoload -> psr-4`
 
@@ -30,7 +30,7 @@ The package is designed to be as much consistent with Laravel built-in seeders a
 
 namespace Database\Anonymization;
 
-use Arrilot\LaravelDataAnonymization\AbstractAnonymizer;
+use Yo1L\LaravelDataAnonymization\AbstractAnonymizer;
 
 class DatabaseAnonymizer extends AbstractAnonymizer
 {
@@ -54,8 +54,8 @@ class DatabaseAnonymizer extends AbstractAnonymizer
 
 namespace Database\Anonymization;
 
-use Arrilot\DataAnonymization\Blueprint;
-use Arrilot\LaravelDataAnonymization\AbstractAnonymizer;
+use Yo1L\DataAnonymization\Blueprint;
+use Yo1L\LaravelDataAnonymization\AbstractAnonymizer;
 use Faker\Generator as Faker;
 
 class UsersAnonymizer extends AbstractAnonymizer
@@ -67,7 +67,7 @@ class UsersAnonymizer extends AbstractAnonymizer
      */
     public function run()
     {
-        // For more info about this part read here https://github.com/arrilot/data-anonymization
+        // For more info about this part read here https://github.com/Yo1L/data-anonymization
         $this->table('users', function (Blueprint $table) {
 
             $table->column('email')->replaceWith(function(Faker $faker) {

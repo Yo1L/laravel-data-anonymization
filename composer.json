@@ -1,5 +1,5 @@
 {
-  "name": "arrilot/laravel-data-anonymization",
+  "name": "Yo1L/laravel-data-anonymization",
   "license": "MIT",
   "description": "Laravel bridge for arrilot/data-anonymization",
   "keywords": [
@@ -11,6 +11,9 @@
     {
       "name": "Nekrasov Ilya",
       "email": "nekrasov.ilya90@gmail.com"
+    },
+    {
+      "name": "Yo1L",
     }
   ],
   "homepage": "https://github.com/arrilot/laravel-data-anonymization",

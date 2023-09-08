@@ -1,10 +1,6 @@
-[![Latest Stable Version](https://poser.pugx.org/yo1l/laravel-data-anonymization/v/stable.svg)](https://packagist.org/packages/yo1l/laravel-data-anonymization/)
-[![Total Downloads](https://img.shields.io/packagist/dt/yo1l/laravel-data-anonymization.svg?style=flat)](https://packagist.org/packages/yo1l/laravel-data-anonymization)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/yo1l/laravel-data-anonymization/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yo1l/laravel-data-anonymization/)
-
 # Laravel Data Anonymization
 
-* This is a bridge package for a full integration of [yo1l/data-anonymization](https://github.com/yo1l/data-anonymization) into Laravel framework.
+* This is a bridge package for a full integration of [arrilot/data-anonymization](https://github.com/arrilot/data-anonymization) into Laravel framework.
 
 ## Installation
 
@@ -30,7 +26,7 @@ The package is designed to be as much consistent with Laravel built-in seeders a
 
 namespace Database\Anonymization;
 
-use Yo1L\LaravelDataAnonymization\AbstractAnonymizer;
+use Arrilot\LaravelDataAnonymization\AbstractAnonymizer;
 
 class DatabaseAnonymizer extends AbstractAnonymizer
 {
@@ -55,7 +51,7 @@ class DatabaseAnonymizer extends AbstractAnonymizer
 namespace Database\Anonymization;
 
 use Arrilot\DataAnonymization\Blueprint;
-use Yo1L\LaravelDataAnonymization\AbstractAnonymizer;
+use Arrilot\LaravelDataAnonymization\AbstractAnonymizer;
 use Faker\Generator as Faker;
 
 class UsersAnonymizer extends AbstractAnonymizer
@@ -67,7 +63,7 @@ class UsersAnonymizer extends AbstractAnonymizer
      */
     public function run()
     {
-        // For more info about this part read here https://github.com/yo1l/data-anonymization
+        // For more info about this part read here https://github.com/arrilot/data-anonymization
         $this->table('users', function (Blueprint $table) {
 
             $table->column('email')->replaceWith(function(Faker $faker) {
@@ -92,4 +88,3 @@ class UsersAnonymizer extends AbstractAnonymizer
 
 Anonymization is performed using `php artisan db:anonymize` command.
 Its signature is identical with `db:seed` command.
-

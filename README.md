@@ -30,7 +30,7 @@ The package is designed to be as much consistent with Laravel built-in seeders a
 
 namespace Database\Anonymization;
 
-use yo1l\LaravelDataAnonymization\AbstractAnonymizer;
+use Yo1L\LaravelDataAnonymization\AbstractAnonymizer;
 
 class DatabaseAnonymizer extends AbstractAnonymizer
 {

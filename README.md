@@ -1,10 +1,10 @@
-[![Latest Stable Version](https://poser.pugx.org/Yo1L/laravel-data-anonymization/v/stable.svg)](https://packagist.org/packages/Yo1L/laravel-data-anonymization/)
-[![Total Downloads](https://img.shields.io/packagist/dt/Yo1L/laravel-data-anonymization.svg?style=flat)](https://packagist.org/packages/Yo1L/laravel-data-anonymization)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/Yo1L/laravel-data-anonymization/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Yo1L/laravel-data-anonymization/)
+[![Latest Stable Version](https://poser.pugx.org/yo1l/laravel-data-anonymization/v/stable.svg)](https://packagist.org/packages/yo1l/laravel-data-anonymization/)
+[![Total Downloads](https://img.shields.io/packagist/dt/yo1l/laravel-data-anonymization.svg?style=flat)](https://packagist.org/packages/yo1l/laravel-data-anonymization)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/yo1l/laravel-data-anonymization/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yo1l/laravel-data-anonymization/)
 
 # Laravel Data Anonymization
 
-* This is a bridge package for a full integration of [yo1l/data-anonymization](https://github.com/Yo1L/data-anonymization) into Laravel framework.
+* This is a bridge package for a full integration of [yo1l/data-anonymization](https://github.com/yo1l/data-anonymization) into Laravel framework.
 
 ## Installation
 
@@ -30,7 +30,7 @@ The package is designed to be as much consistent with Laravel built-in seeders a
 
 namespace Database\Anonymization;
 
-use Yo1L\LaravelDataAnonymization\AbstractAnonymizer;
+use yo1l\LaravelDataAnonymization\AbstractAnonymizer;
 
 class DatabaseAnonymizer extends AbstractAnonymizer
 {
@@ -67,7 +67,7 @@ class UsersAnonymizer extends AbstractAnonymizer
      */
     public function run()
     {
-        // For more info about this part read here https://github.com/Yo1L/data-anonymization
+        // For more info about this part read here https://github.com/yo1l/data-anonymization
         $this->table('users', function (Blueprint $table) {
 
             $table->column('email')->replaceWith(function(Faker $faker) {
